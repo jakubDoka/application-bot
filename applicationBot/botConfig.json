@@ -1,0 +1,11 @@
+{
+	"comment": "IDs of channels and roles has to me in quotation marks!!",
+	"token": "Njg5NzQ3OTA4ODU3MTY3OTE0.XswaWg.1AEhht7JNylVt5AuKVMwIjmqrm0",
+	"prefix":"!",
+	"channels":{
+		"commands":"551880313161121884"
+	},
+	"roles":{
+		"manager":"714027518998478849",
+		"candidate":"717345099943772192"
+	}}

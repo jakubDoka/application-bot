@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version null
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.javacord:javacord:3.0.6"
+    compile 'com.googlecode.json-simple:json-simple:1.1.1'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+                'Main-Class': 'Bot.BotMain'
+        )
+    }
+    from{
+        configurations.runtimeClasspath.collect{it.isDirectory() ? it : zipTree(it)}
+    }
+}
