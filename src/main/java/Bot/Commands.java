@@ -156,6 +156,9 @@ public class Commands {
             }
             @Override
             public void run(CommandContext ctx) {
+                if(!ctx.event.getMessage().isPrivateMessage()){
+                    ctx.reply("You have to write your answers directly to me!");
+                }
                 if(!Tools.canParseInt(ctx.args[0])){
                     ctx.reply("Option index has to be integer");
                     return;
